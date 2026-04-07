@@ -63,21 +63,21 @@ export default function Statistics() {
   return (
     <section
       ref={ref}
-      className="bg-charcoal py-20"
+      className="bg-white py-20 dark:bg-charcoal"
       aria-label="Statistics"
     >
       <Container>
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {statistics.map((stat) => (
             <div key={stat.label} className="text-center">
-              <p className="text-3xl font-light text-champagne md:text-4xl lg:text-5xl">
+              <p className="text-3xl font-light text-charcoal md:text-4xl lg:text-5xl dark:text-champagne">
                 <AnimatedNumber
                   value={stat.value}
                   suffix={stat.suffix}
                   inView={inView}
                 />
               </p>
-              <p className="mt-2 text-sm text-champagne/60">{stat.label}</p>
+              <p className="mt-2 text-sm text-charcoal/60 dark:text-champagne/60">{stat.label}</p>
             </div>
           ))}
         </div>

@@ -12,11 +12,11 @@ export default function Home() {
     <>
       <Hero />
       <QuoteBar />
+      <Statistics />
       <ProcedureCategories />
       <BeforeAfterGallery />
       <HowItWorks />
       <Testimonials />
-      <Statistics />
       <CtaBanner />
     </>
   );

@@ -35,7 +35,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col rounded-2xl border border-cream bg-white p-6 dark:border-champagne/10 dark:bg-gradient-end"
+              className="flex flex-col rounded-2xl border border-cream bg-white p-6 dark:border-champagne/10 dark:bg-[#292524]"
             >
               <StarRating rating={t.rating} />
               <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-charcoal/70 dark:text-champagne/60">
