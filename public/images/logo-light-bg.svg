@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="katman_2" data-name="katman 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 457.47 78.06">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: 0em;
+      }
+
+      .cls-2 {
+        fill: #7f673c;
+        font-family: GermanySans, 'Germany Sans';
+        font-size: 70.29px;
+      }
+
+      .cls-3 {
+        letter-spacing: -.15em;
+      }
+    </style>
+  </defs>
+  <g id="katman_1" data-name="katman 1">
+    <text class="cls-2" transform="translate(0 60.91)"><tspan x="0" y="0">ESTE</tspan><tspan class="cls-3" x="186.49" y="0">L</tspan><tspan class="cls-1" x="220.86" y="0">OOMA</tspan></text>
+  </g>
+</svg>
