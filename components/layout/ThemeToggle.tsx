@@ -3,15 +3,18 @@
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("theme") === "dark";
+    }
+    return false;
+  });
 
   useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    if (saved === "dark") {
-      setDark(true);
+    if (dark) {
       document.documentElement.classList.add("dark");
     }
-  }, []);
+  }, [dark]);
 
   const toggle = () => {
     const next = !dark;
