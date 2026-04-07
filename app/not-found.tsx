@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <section className="flex min-h-[calc(100vh-5rem)] items-center justify-center px-4">
       <div className="text-center">
-        <p className="text-[10rem] font-extralight leading-none tracking-tight text-champagne md:text-[14rem]">
+        <p className="font-[family-name:var(--font-geist-mono)] text-[10rem] font-extralight leading-none tracking-tight text-champagne md:text-[14rem]">
           404
         </p>
         <h1 className="mt-2 text-2xl font-light tracking-tight text-charcoal dark:text-champagne md:text-3xl">
