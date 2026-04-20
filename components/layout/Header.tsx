@@ -4,6 +4,7 @@ import Button from "@/components/ui/Button";
 import HeaderClient from "./HeaderClient";
 import MegaMenu from "./MegaMenu";
 import MobileNav from "./MobileNav";
+import DropdownMenu from "./DropdownMenu";
 import ThemeToggle from "./ThemeToggle";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { navItems } from "@/lib/constants";
@@ -34,15 +35,23 @@ export default function Header() {
             <MegaMenu />
             {navItems
               .filter((item) => !item.hasMegaMenu)
-              .map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="text-sm font-medium text-charcoal/80 transition-colors hover:text-gold dark:text-champagne/70 dark:hover:text-champagne"
-                >
-                  {item.label}
-                </Link>
-              ))}
+              .map((item) =>
+                item.subItems && item.subItems.length > 0 ? (
+                  <DropdownMenu
+                    key={item.href}
+                    label={item.label}
+                    items={item.subItems}
+                  />
+                ) : (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="text-sm font-medium text-charcoal/80 transition-colors hover:text-gold dark:text-champagne/70 dark:hover:text-champagne"
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
           </nav>
 
           {/* Right: Theme toggle + CTA + Mobile nav toggle */}

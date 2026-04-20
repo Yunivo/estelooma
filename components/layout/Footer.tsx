@@ -28,6 +28,59 @@ export default function Footer() {
               Premium health tourism and aesthetic procedures in Istanbul,
               Turkey.
             </p>
+            <div className="mt-6 flex items-center gap-3">
+              {[
+                {
+                  label: "Instagram",
+                  href: "https://www.instagram.com/estelooma",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-4 w-4">
+                      <rect x="3" y="3" width="18" height="18" rx="5" />
+                      <circle cx="12" cy="12" r="4" />
+                      <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "TikTok",
+                  href: "https://www.tiktok.com/@estelooma",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+                      <path d="M19.3 7.5a5.8 5.8 0 01-3.4-1.1 5.8 5.8 0 01-2.2-3.4h-3v12.3a2.6 2.6 0 11-1.8-2.5V9.7a5.6 5.6 0 104.8 5.6V9.8a8.8 8.8 0 005.6 1.9V8.6a5.7 5.7 0 01-0.04-1.1z" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "Facebook",
+                  href: "https://www.facebook.com/estelooma",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+                      <path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.9.2-1.5 1.5-1.5h1.6V4.4a21 21 0 00-2.3-.1c-2.3 0-3.8 1.4-3.8 4v2.2H8v3h2.5V21z" />
+                    </svg>
+                  ),
+                },
+                {
+                  label: "LinkedIn",
+                  href: "https://www.linkedin.com/company/estelooma",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4">
+                      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.59 0 4.27 2.36 4.27 5.43zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56z" />
+                    </svg>
+                  ),
+                },
+              ].map((s) => (
+                <a
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={s.label}
+                  className="flex h-9 w-9 items-center justify-center rounded-full border border-charcoal/10 text-charcoal/60 transition-all hover:border-gold/50 hover:bg-gold/5 hover:text-gold dark:border-champagne/15 dark:text-champagne/60 dark:hover:border-gold/50 dark:hover:text-gold"
+                >
+                  {s.icon}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick links */}

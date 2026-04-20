@@ -59,10 +59,10 @@ export default function QuoteForm() {
     : allProcedures;
 
   const inputCls =
-    "w-full rounded-xl border border-charcoal/10 bg-cream/40 px-4 py-3.5 text-sm text-charcoal placeholder:text-charcoal/35 transition-colors focus:border-gold focus:bg-white focus:outline-none";
+    "w-full rounded-xl border border-charcoal/10 bg-cream/40 px-4 py-3.5 text-sm text-charcoal placeholder:text-charcoal/35 transition-colors focus:border-gold focus:bg-white focus:outline-none dark:border-champagne/10 dark:bg-champagne/5 dark:text-champagne dark:placeholder:text-champagne/35 dark:focus:bg-[#0F0D0C]";
 
   const labelCls =
-    "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-charcoal/45";
+    "mb-1.5 block text-xs font-semibold uppercase tracking-wider text-charcoal/45 dark:text-champagne/45";
 
   return (
     <form
@@ -71,7 +71,7 @@ export default function QuoteForm() {
     >
       {/* Personal Information */}
       <div>
-        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal">
+        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal dark:text-champagne">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/10 text-xs font-bold text-gold">
             1
           </span>
@@ -113,11 +113,11 @@ export default function QuoteForm() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-charcoal/5" />
+      <div className="border-t border-charcoal/5 dark:border-champagne/5" />
 
       {/* Procedure Selection */}
       <div>
-        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal">
+        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal dark:text-champagne">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/10 text-xs font-bold text-gold">
             2
           </span>
@@ -140,7 +140,7 @@ export default function QuoteForm() {
                 className={inputCls}
               />
               <svg
-                className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal/20"
+                className="pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-charcoal/20 dark:text-champagne/20"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -190,7 +190,7 @@ export default function QuoteForm() {
 
             {/* Dropdown */}
             {showDropdown && !selectedProcedure && (
-              <div className="absolute left-0 right-0 top-full z-30 mt-1 max-h-56 overflow-y-auto rounded-xl border border-charcoal/10 bg-white shadow-lg">
+              <div className="absolute left-0 right-0 top-full z-30 mt-1 max-h-56 overflow-y-auto rounded-xl border border-charcoal/10 bg-white shadow-lg dark:border-champagne/10 dark:bg-[#0F0D0C]">
                 {filtered.length > 0 ? (
                   (() => {
                     let lastCategory = "";
@@ -200,13 +200,13 @@ export default function QuoteForm() {
                       return (
                         <div key={p.slug}>
                           {showHeader && (
-                            <div className="sticky top-0 bg-cream/90 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-charcoal/40 backdrop-blur-sm">
+                            <div className="sticky top-0 bg-cream/90 px-4 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-charcoal/40 backdrop-blur-sm dark:bg-[#0F0D0C]/90 dark:text-champagne/40">
                               {p.category}
                             </div>
                           )}
                           <button
                             type="button"
-                            className="w-full px-4 py-2.5 text-left text-sm text-charcoal transition-colors hover:bg-gold/5 hover:text-gold"
+                            className="w-full px-4 py-2.5 text-left text-sm text-charcoal transition-colors hover:bg-gold/5 hover:text-gold dark:text-champagne"
                             onClick={() => {
                               setSelectedProcedure(p.slug);
                               setProcedureQuery(p.name);
@@ -220,7 +220,7 @@ export default function QuoteForm() {
                     });
                   })()
                 ) : (
-                  <div className="px-4 py-6 text-center text-sm text-charcoal/35">
+                  <div className="px-4 py-6 text-center text-sm text-charcoal/35 dark:text-champagne/35">
                     No procedures found
                   </div>
                 )}
@@ -235,11 +235,11 @@ export default function QuoteForm() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-charcoal/5" />
+      <div className="border-t border-charcoal/5 dark:border-champagne/5" />
 
       {/* Additional Details */}
       <div>
-        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal">
+        <h3 className="mb-5 flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-charcoal dark:text-champagne">
           <span className="flex h-7 w-7 items-center justify-center rounded-full bg-gold/10 text-xs font-bold text-gold">
             3
           </span>
@@ -258,10 +258,10 @@ export default function QuoteForm() {
           </div>
           <div>
             <label className={labelCls}>Upload Photos (optional)</label>
-            <div className="flex items-center justify-center rounded-xl border border-dashed border-charcoal/10 bg-cream/30 px-6 py-8 transition-colors hover:border-gold">
+            <div className="flex items-center justify-center rounded-xl border border-dashed border-charcoal/10 bg-cream/30 px-6 py-8 transition-colors hover:border-gold dark:border-champagne/10 dark:bg-champagne/5">
               <div className="text-center">
                 <svg
-                  className="mx-auto h-8 w-8 text-charcoal/15"
+                  className="mx-auto h-8 w-8 text-charcoal/15 dark:text-champagne/15"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -273,13 +273,13 @@ export default function QuoteForm() {
                     d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0022.5 18.75V5.25A2.25 2.25 0 0020.25 3H3.75A2.25 2.25 0 001.5 5.25v13.5A2.25 2.25 0 003.75 21z"
                   />
                 </svg>
-                <p className="mt-2 text-xs text-charcoal/35">
+                <p className="mt-2 text-xs text-charcoal/35 dark:text-champagne/35">
                   Drag &amp; drop or{" "}
                   <span className="cursor-pointer font-medium text-gold hover:text-dark-gold">
                     browse files
                   </span>
                 </p>
-                <p className="mt-1 text-[11px] text-charcoal/25">
+                <p className="mt-1 text-[11px] text-charcoal/25 dark:text-champagne/25">
                   JPG, PNG up to 10 MB
                 </p>
               </div>
@@ -289,7 +289,7 @@ export default function QuoteForm() {
       </div>
 
       {/* Divider */}
-      <div className="border-t border-charcoal/5" />
+      <div className="border-t border-charcoal/5 dark:border-champagne/5" />
 
       {/* Submit */}
       <div className="flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:justify-between">
@@ -300,7 +300,7 @@ export default function QuoteForm() {
             onChange={(e) => setAgreed(e.target.checked)}
             className="mt-0.5 h-4 w-4 shrink-0 rounded border-charcoal/10 accent-gold"
           />
-          <span className="text-xs leading-relaxed text-charcoal/45">
+          <span className="text-xs leading-relaxed text-charcoal/45 dark:text-champagne/45">
             I agree to the{" "}
             <a
               href="/privacy-policy"

@@ -154,16 +154,62 @@ export default function MobileNav() {
           {/* Other nav items */}
           {navItems
             .filter((item) => !item.hasMegaMenu)
-            .map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="border-b border-cream py-3 text-sm font-medium text-charcoal transition-colors hover:text-gold dark:border-champagne/10 dark:text-champagne dark:hover:text-gold"
-                onClick={() => setIsOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
+            .map((item) => {
+              const hasSubItems = item.subItems && item.subItems.length > 0;
+              if (hasSubItems) {
+                const expanded = expandedCategory === item.href;
+                return (
+                  <div
+                    key={item.href}
+                    className="border-b border-cream dark:border-champagne/10"
+                  >
+                    <button
+                      onClick={() => toggleCategory(item.href)}
+                      className="flex w-full items-center justify-between py-3 text-sm font-medium text-charcoal dark:text-champagne"
+                      aria-expanded={expanded}
+                    >
+                      {item.label}
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.5"
+                        className={`transition-transform ${expanded ? "rotate-180" : ""}`}
+                      >
+                        <path d="M4 6l4 4 4-4" />
+                      </svg>
+                    </button>
+                    {expanded && (
+                      <ul className="mb-3 space-y-1 pl-4">
+                        {item.subItems!.map((sub) => (
+                          <li key={sub.href}>
+                            <Link
+                              href={sub.href}
+                              className="block py-2 text-sm text-charcoal/70 transition-colors hover:text-gold dark:text-champagne/60 dark:hover:text-gold"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {sub.label}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                );
+              }
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="border-b border-cream py-3 text-sm font-medium text-charcoal transition-colors hover:text-gold dark:border-champagne/10 dark:text-champagne dark:hover:text-gold"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
 
           {/* CTA */}
           <div className="mt-6">

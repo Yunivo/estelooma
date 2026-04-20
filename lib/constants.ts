@@ -5,7 +5,27 @@ export const navItems: NavItem[] = [
   { label: "Before & Afters", href: "/before-after" },
   { label: "Our Patients", href: "/testimonials" },
   { label: "Blog", href: "/blog" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    subItems: [
+      {
+        label: "About Us",
+        href: "/about",
+        description: "Our story, mission and the standards behind every Estelooma journey.",
+      },
+      {
+        label: "Our Doctors",
+        href: "/about/our-doctors",
+        description: "The rigorously vetted surgeons we partner with in Istanbul.",
+      },
+      {
+        label: "Our Hospitals",
+        href: "/about/our-hospitals",
+        description: "JCI-aligned facilities where every procedure takes place.",
+      },
+    ],
+  },
   { label: "Contact", href: "/contact" },
 ];
 

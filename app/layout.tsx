@@ -10,9 +10,29 @@ const openSans = Open_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ESTELOOMA | Premium Health Tourism in Istanbul",
+  metadataBase: new URL("https://estelooma.com"),
+  title: {
+    default: "ESTELOOMA | Premium Health Tourism in Istanbul",
+    template: "%s | ESTELOOMA",
+  },
   description:
-    "Expert cosmetic surgery, rhinoplasty, weight loss surgery and eye care in Istanbul. JCI-accredited hospitals, VIP transfers, and dedicated aftercare.",
+    "Expert cosmetic surgery, rhinoplasty, weight loss surgery and eye care in Istanbul. JCI-aligned hospitals, VIP transfers and dedicated aftercare.",
+  applicationName: "Estelooma",
+  authors: [{ name: "Estelooma" }],
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    siteName: "Estelooma",
+    url: "https://estelooma.com",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
