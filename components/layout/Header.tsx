@@ -20,13 +20,13 @@ export default function Header() {
             <img
               src="/images/logo-light-bg.svg"
               alt="ESTELOOMA"
-              className="h-8 w-auto dark:hidden"
+              className="h-5 w-auto dark:hidden"
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/logo-dark-bg.svg"
               alt="ESTELOOMA"
-              className="hidden h-8 w-auto dark:block"
+              className="hidden h-5 w-auto dark:block"
             />
           </Link>
 

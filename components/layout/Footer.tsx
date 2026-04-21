@@ -13,13 +13,13 @@ export default function Footer() {
             <img
               src="/images/logo-light-bg.svg"
               alt="ESTELOOMA"
-              className="h-7 w-auto dark:hidden"
+              className="h-4 w-auto dark:hidden"
             />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/logo-dark-bg.svg"
               alt="ESTELOOMA"
-              className="hidden h-7 w-auto dark:block"
+              className="hidden h-4 w-auto dark:block"
             />
             <p className="mt-4 text-sm leading-relaxed text-charcoal/50 dark:text-champagne/60">
               Where Beauty is Curated
